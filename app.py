@@ -7,5 +7,5 @@ def home():
     return 'hello world'
 
 if '__main__' == __name__:
-    app.debug = True
+    #app.debug = True
     app.run()
