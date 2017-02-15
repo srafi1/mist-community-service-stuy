@@ -1,2 +1,3 @@
-# mist-community-service-stuy
-Community service 2017
+# StuyCSDojo.github.io
+
+Website!
