@@ -1,8 +1,0 @@
-{
-  "name": "MIST Community Service 2017",
-  "description": "Distributing resources for middle school and high school students",
-  "image": "heroku/python",
-  "repository": "https://github.com/srafi1/mist-community-service-stuy",
-  "keywords": ["python", "django" ],
-  "addons": [ "heroku-postgresql" ]
-}
