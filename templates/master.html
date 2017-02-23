@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% block head %}
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+    <link rel="stylesheet" href="../../static/main.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+
+    <title>
+      {% if page == 'home' %}
+      Student Essentials
+      {% endif %}
+      {% if page == 'opportunities' %}
+      Opportunities
+      {% endif %}
+      {% if page == 'studyhelp' %}
+      Study Help
+      {% endif %}
+      {% if page == 'testprep' %}
+      Test Prep
+      {% endif %}
+      {% if page == 'studytips' %}
+      Study Tips
+      {% endif %}
+    </title>
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../static/js/main.js"></script>
+    
+    {% endblock %}
+  </head>
+
+  <body class='gray-lighten-4'>
+
+    <nav>
+      <div class='nav-wrapper blue darken-4'>
+        <a href='/' class='brand-logo'> Student Essentials</a>
+        <a href='#' data-activates='mobile-demo' class='button-collapse'><i class='material-icons'>menu</i></a>
+        <ul id='nav-mobile' class='right-padding right hide-on-med-and-down'>
+          <li
+	     {% if page == 'home' %}
+	     class='active'
+	     {% endif %}
+	     ><a href='/'>Home</a></li>
+          <li
+	     {% if page == 'opportunities' %}
+	     class='active'
+	     {% endif %}
+	     ><a href='/opportunities'>Opportunities</a></li>
+          <li
+	     {% if page == 'studyhelp' %}
+	     class='active'
+	     {% endif %}
+	     ><a href='/studyhelp'>Study Help</a></li>
+          <li
+	     {% if page == 'testprep' %}
+	     class='active'
+	     {% endif %}
+	     ><a href='/testprep'>Test Prep</a></li>
+          <li
+	     {% if page == 'studytips' %}
+	     class='active'
+	     {% endif %}
+	     ><a href='/studytips'>Study Tips</a></li>
+        </ul>
+        <ul class='side-nav' id='mobile-demo'>
+          <li class='active'><a href='/'>Home</a></li>
+          <li><a href='/opportunities'>Opportunities</a></li>
+          <li><a href='/studyhelp'>Study Help</a></li>
+          <li><a href='/testprep'>Test Prep</a></li>
+          <li><a href='/studytips'>Study Tips</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class='container'>
+      {% block container %}
+      {% endblock %}
+    </div>	
+  </body>
+</html>
+
+

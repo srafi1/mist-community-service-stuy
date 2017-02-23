@@ -1,28 +1,15 @@
-{% extends "base.html" %}
+{% extends "master.html" %}
 
-{% block title %}Page Not Found{% endblock %}
+{% block title %}Home{% endblock %}
 
-{% block css %}
-<style type="text/css">
-  body{
-    padding-top: 40px;
-  }
-  h1, p{
-    text-align:center;
-  }
-  h1{
-    font-size:64px;
-    margin:75px 0 50px;
-  }
-  p{
-    font-size:24px;
-    margin:15px 0;
-  }
-</style>
+{% block head %}
+    {{ super() }}
 {% endblock %}
 
-{% block main %}
-<h1>404</h1>
-<p>That page doesn't even exist.</p>
-<p>Why don't you just <a href="{{ url_for('home') }}">go back home</a>?</p>
+{% block container %}
+    <h4>Uh oh! Error 404</h4>
+    <div class='divider'></div>
+    <p>It appears that the page you are trying to access does not exist.
+	Please click on one of the links on the nav bar or the back button to go back
+	to the realm of the website.</p>
 {% endblock %}
