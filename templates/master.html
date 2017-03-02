@@ -1,15 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     {% block head %}
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
-    <link rel="stylesheet" href="../../static/main.css">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
 
     <title>
       {% if page == 'home' %}
@@ -27,64 +24,85 @@
       {% if page == 'studytips' %}
       Study Tips
       {% endif %}
+      {% if page == 'contact' %}
+      Contact
+      {% endif %}
     </title>
-
-    <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
-    <script type="text/javascript" src="../../static/js/main.js"></script>
     
+    <!-- stylesheet css -->
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/css/nivo-lightbox.css">
+    <link rel="stylesheet" href="../static/css/nivo_themes/default/default.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <!-- google web font css -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600,700' rel='stylesheet' type='text/css'>
     {% endblock %}
   </head>
-
-  <body class='gray-lighten-4'>
-
-    <nav>
-      <div class='nav-wrapper blue darken-4'>
-        <a href='/' class='brand-logo'> Student Essentials</a>
-        <a href='#' data-activates='mobile-demo' class='button-collapse'><i class='material-icons'>menu</i></a>
-        <ul id='nav-mobile' class='right-padding right hide-on-med-and-down'>
-          <li
-	     {% if page == 'home' %}
-	     class='active'
-	     {% endif %}
-	     ><a href='/'>Home</a></li>
-          <li
-	     {% if page == 'opportunities' %}
-	     class='active'
-	     {% endif %}
-	     ><a href='/opportunities'>Opportunities</a></li>
-          <li
-	     {% if page == 'studyhelp' %}
-	     class='active'
-	     {% endif %}
-	     ><a href='/studyhelp'>Study Help</a></li>
-          <li
-	     {% if page == 'testprep' %}
-	     class='active'
-	     {% endif %}
-	     ><a href='/testprep'>Test Prep</a></li>
-          <li
-	     {% if page == 'studytips' %}
-	     class='active'
-	     {% endif %}
-	     ><a href='/studytips'>Study Tips</a></li>
-        </ul>
-        <ul class='side-nav' id='mobile-demo'>
-          <li class='active'><a href='/'>Home</a></li>
-          <li><a href='/opportunities'>Opportunities</a></li>
-          <li><a href='/studyhelp'>Study Help</a></li>
-          <li><a href='/testprep'>Test Prep</a></li>
-          <li><a href='/studytips'>Study Tips</a></li>
-        </ul>
+  <body data-spy="scroll" data-target=".navbar-collapse">
+    
+    <!-- navigation -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+	<div class="navbar-header">
+	  <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	    <span class="icon icon-bar"></span>
+	    <span class="icon icon-bar"></span>
+	    <span class="icon icon-bar"></span>
+	  </button>
+	  <a href="/home" class="navbar-brand">Student Essentials</a>
+	</div>
+	<div class="collapse navbar-collapse">
+	  <ul class="nav navbar-nav navbar-right">
+	    <li><a href="/home">HOME</a></li>
+	    <li><a href="/opportunities">OPPORTUNITIES</a></li>
+	    <li><a href="/studyhelp">STUDY HELP</a></li>
+	    <li><a href="/testprep">TEST PREP</a></li>
+	    <li><a href="/studytips">STUDY TIPS</a></li>
+	    <li><a href="/contact">CONTACT</a></li>
+	  </ul>
+	</div>
       </div>
-    </nav>
+    </div>		
 
-    <div class='container'>
-      {% block container %}
-      {% endblock %}
-    </div>	
+    <!-- divider section -->
+    <div class="container">
+      <div class="row">
+	<div class="col-md-1 col-sm-1"></div>
+	<div class="col-md-10 col-sm-10">
+	  <hr>
+	</div>
+	<div class="col-md-1 col-sm-1"></div>
+      </div>
+    </div>
+
+    <!-- copyright section -->
+    <div class="copyright">
+      <div class="container">
+	<div class="row">
+	  <div class="col-md-12 col-sm-12">
+	    <p>Copyright &copy; 2016 Minimax Digital Firm 
+              
+              - Design: <a rel="nofollow" href="http://www.tooplate.com" target="_parent">Tooplate</a></p>
+	  </div>
+	</div>
+      </div>
+    </div>
+
+    <!-- scrolltop section -->
+    <a href="#top" class="go-top"><i class="fa fa-angle-up"></i></a>
+
+
+    <!-- javascript js -->	
+    <script src="../static/js/jquery.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>	
+    <script src="../static/js/nivo-lightbox.min.js"></script>
+    <script src="../static/js/smoothscroll.js"></script>
+    <script src="../static/js/jquery.nav.js"></script>
+    <script src="../static/js/isotope.js"></script>
+    <script src="../static/js/imagesloaded.min.js"></script>
+    <script src="../static/js/custom.js"></script>
+    {% block container %}
+    {% endblock %}
   </body>
 </html>
-
-

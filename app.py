@@ -26,6 +26,10 @@ def testprep():
 @app.route('/studytips')
 def studytips():
     return render_template('studytips.html', page='studytips')
+    
+@app.route('/contact')
+def contact():
+    return render_template('contact.html', page='contact')
 
 if '__main__' == __name__:
     app.run(debug=True)
