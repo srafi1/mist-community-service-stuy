@@ -1,0 +1,25 @@
+<li
+	       {% if page == 'opportunities' %}
+	       class="navbar-active"
+	       {% endif %}
+	       ><a href="/opportunities">OPPORTUNITIES</a></li>
+	    <li
+	       {% if page == 'studyhelp' %}
+	       class="navbar-active"
+	       {% endif %}
+	       ><a href="/studyhelp">STUDY HELP</a></li>
+	    <li
+	       {% if page == 'testprep' %}
+	       class="navbar-active"
+	       {% endif %}
+	       ><a href="/testprep">TEST PREP</a></li>
+	    <li
+	       {% if page == 'studytips' %}
+	       class="navbar-active"
+	       {% endif %}
+	       ><a href="/studytips">STUDY TIPS</a></li>
+	    <li
+	       {% if page == 'contact' %}
+	       class="navbar-active"
+	       {% endif %}
+	       ><a href="/contact">CONTACT</a></li>

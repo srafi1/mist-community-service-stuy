@@ -65,8 +65,8 @@ img:hover {
     line-height: 50px;
     height: 90px;
     margin: 0;
-    padding: 20px 20px 40px 20px;
-	transition: all 0.4s ease-in-out;
+    padding: 20px;
+    transition: all 0.4s ease-in-out;
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
     -ms-transition: all 0.4s ease-in-out;
@@ -77,26 +77,21 @@ img:hover {
 .navbar-default .navbar-nav li a {
     border-right: 1px solid #f9f9f9;
     color: #202020;
-     font-weight: bold;
+    font-weight: bold;
     padding-right: 30px;
     padding-left: 30px;
     line-height: 60px;
 	
-	transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
     -ms-transition: all 0.4s ease-in-out;
-  }
-.navbar-default .navbar-nav > li > a:clicked,
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
-  color: #f2af00;
 }
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus {
-  color: #f2af00;
-  background-color: transparent;
+.navbar-default .navbar-nav li a:hover {
+    background: #eee;
+}
+.navbar-default .navbar-nav li .activenav {
+    color: #f2af00;
 }
 .navbar-default .navbar-toggle {
     border: none;
@@ -105,10 +100,6 @@ img:hover {
 .navbar-default .navbar-toggle .icon-bar {
     background: #dc5034;
     border-color: transparent;
-}
-.navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus { 
-  background-color: transparent 
 }
 
 /* home section */
