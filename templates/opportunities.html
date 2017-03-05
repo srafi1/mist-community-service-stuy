@@ -1,4 +1,157 @@
 {% extends 'master.html' %}
-{% block container %}
 
-{% endblock %}
+{% block container %}
+<!-- intro section -->
+<div class="intro">
+  <center>
+    <h1 class="head">STUDENT OPPORTUNITIES</h1>
+    <h3 class="subhead">Diploma Disparity</h3>
+  </center>
+  <div class="description">
+    <h2 class="head2">OVERVIEW & PURPOSE</h2>
+    <p class="description">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The American education system is accessible to all students, regardless of economic or social status, so that everyone may gain a rewarding education. However, only 53% of New York City public high schools have sufficient college and career programs. In addition, according to statistics released by the NYC Department of Education, some schools have a graduation rate as low as 28% while others boast a full 100%. This disparity may be explained by the lack of access to resources such as college and test preparation, tutoring, internship and volunteer opportunities.</p>
+  </div>
+</div>
+
+<!-- divider section -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-1 col-sm-1"></div>
+    <div class="col-md-10 col-sm-10">
+      <hr>
+    </div>
+    <div class="col-md-1 col-sm-1"></div>
+  </div>
+</div>
+<br>
+
+<!-- events section -->
+<div class="description intro">
+  <div class="row">
+    <div class="col-md-6 col-sm-6">
+      <h2 class="head2">EVENTS:</h2>
+      <ul>
+	{% for event in events %}
+	<li>
+	  {{event['name']}}<br>
+	  Location: {{event['location']}}<br>
+	  Details: {{event['details']}}<br>
+	  <a href="{{event['link']}}">Learn more</a>
+	</li>
+	{% endfor %}
+      </ul>
+    </div>
+    <div class="col-md-6 col-sm-6">
+      <h2 class="head2">LAW/JOBS/BUSINESS/GOVERNMENT</h2>
+      <ul>
+	{% for l in law: %}
+	<li>
+	  {{l['name']}}<br>
+	  Duration of program: {{l['duration of program']}}<br>
+	  Age/grade requirements: {{l['age/grade requirements']}}<br>
+	  Details: {{l['details']}}<br>
+	  <a href="{{l['link']}}">Learn more</a>
+	</li>
+	{% endfor %}
+      </ul>
+    </div>
+    <div class="col-md-6 col-sm-6">
+      <h2 class="head2">COMMUNITY SERVICE</h2>
+      <ul>
+	{% for s in services: %}
+	<li>
+	  {{s['name']}}<br>
+	  Service: {{s["service"]}}<br>
+	  <a href="{{s['link']}}">Learn more</a>
+	</li>
+	{% endfor %}
+      </ul>
+    </div>
+    <div class="col-md-6 col-sm-6">
+      <h2 class="head2">LEADERSHIP/CULTURAL/ADVOCACY</h2>
+      <ul>
+	{% for l in leadership %}
+	<li>
+	  {{l['name']}}<br>
+	  Deadline: {{l['deadline']}}<br>
+	  Duration: {{l['duration']}}<br>
+	  Age/grade requirements: {{l['age/grade requirements']}}<br>
+	  Details: {{l['details']}}<br>
+	  <a href="{{l['link']}}">Learn more</a>
+	</li>
+	{% endfor %}
+      </ul>
+    </div>
+    <div class="col-md-6 col-sm-6">
+      <h2 class="head2">MUSEUMS/MUSIC/ART/THEATER</h2>
+      <ul>
+	{% for l in arts %}
+	<li>
+	  {{l['name']}}<br>
+	  Deadline: {{l['deadline']}}<br>
+	  Duration: {{l['duration']}}<br>
+	  Details: {{l['details']}}<br>
+	  <a href="{{l['link']}}">Learn more</a>
+	</li>
+	{% endfor %}
+      </ul>
+    </div>    
+    <div class="col-md-6 col-sm-6">
+      <h2 class="head2">PARKS/ENVIRONMENT</h2>
+      <ul>
+	{% for l in parks %}
+	<li>
+	  {{l['name']}}<br>
+	  Deadline: {{l['deadline']}}<br>
+	  Duration: {{l['duration']}}<br>
+	  Age/grade requirements: {{l['age/grade requirements']}}<br>
+	  Details: {{l['details']}}<br>
+	  <a href="{{l['link']}}">Learn more</a>
+	</li>
+	{% endfor %}
+      </ul>
+    </div>
+    <div class="col-md-6 col-sm-6">
+      <h2 class="head2">HEALTH CARE OPPORTUNITIES</h2>
+      <h3 class="subhead">Most NYC hospitals welcome high school student helpers. Here is a link to a list of public NYC hospitals, followed by several links to a variety of local hospital volunteer offices:</h3>
+      <ul>
+	{% for h in health %}
+	<li>
+	  <a href="{{h['link']}}">{{h['name']}}</a>
+	</li>
+	{% endfor %}
+      </ul>
+    </div>
+    <div class="col-md-6 col-sm-6">
+      <h2 class="head2">SCIENCE/TECHNOLOGY/ENGINEERING/MATH OPPORTUNITIES</h2>
+      <ul>
+	{% for s in stem %}
+	<li>
+	  {{s['name']}}<br>
+	  Deadline: {{s['deadline']}}<br>
+	  Location: {{s['location']}}<br>
+	  Duration: {{s['duration']}}<br>
+	  Age/ Grade requirements: {{s['age/ grade requirements']}}<br>
+	  Details: {{s['details']}}<br>
+	  <a href="{{s['link']}}">Learn more</a>
+	</li>
+	{% endfor %}
+      </ul>
+    </div>
+    <div class="col-md-6 col-sm-6">
+      <h2 class="head2">AWARDS/SCHOLARSHIPS</h2>
+      <ul>
+	{% for s in awards %}
+	<li>
+	  {{s['name']}}<br>
+	  Deadline: {{s['deadline']}}<br>
+	  Scholarship $ range: {{s['scholarship $ range']}}<br>
+	  Grade requirements: {{s['grade requirements']}}<br>
+	  <a href="{{s['link']}}">Learn more</a>
+	</li>
+	{% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  {% endblock %}

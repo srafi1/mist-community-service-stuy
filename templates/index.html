@@ -23,7 +23,8 @@
 	<h2>Opportunities</h2>
       </div>
       <div class="col-md-6 col-sm-6">
-	<img src="../static/images/opportunities.jpg" class="img-responsive" alt="about img">
+	<a href="/opportunities">
+	<img src="../static/images/opportunities.jpg" class="img-responsive" alt="about img"></a>
       </div>
       <div class="col-md-6 col-sm-6">
 	<h3>High School Opportunities</h3>
@@ -54,12 +55,13 @@
 	<h2>Study Help</h2>
       </div>
       <div class="col-md-6 col-sm-6">
-	<img src="../static/images/studyhelp.jpg" class="img-responsive" alt="about img">
+	<a href="/studyhelp">
+	  <img src="../static/images/studyhelp.jpg" class="img-responsive" alt="about img"></a>
       </div>
       <div class="col-md-6 col-sm-6">
-	<h3>Help with Studying</h3>
+	<h3>Study tips and tutoring</h3>
 	<h4>Be a scholar</h4>
-	<p>description here</p>
+	<p>Studying for classes is one of the most crucial parts success in high school. Learn how to make the most of your study time with helpful study tips and tutors.</p>
 	<a href="/studyhelp" class="btn btn-default btn-link">Show me!</a>
       </div>
     </div>
@@ -85,12 +87,13 @@
 	<h2>Test Prep</h2>
       </div>
       <div class="col-md-6 col-sm-6">
-	<img src="../static/images/testprep.jpg" class="img-responsive" alt="about img">
+	<a href="/testprep">
+	<img src="../static/images/testprep.jpg" class="img-responsive" alt="about img"></a>
       </div>
       <div class="col-md-6 col-sm-6">
 	<h3>Test Preparation</h3>
 	<h4>Ace those standardized tests</h4>
-	<p>description here</p>
+	<p>Standardized tests can be very daunting. Make the most of your time with the test preparation resources that are most accessible to you.</p>
 	<a href="/testprep" class="btn btn-default btn-link">Show me!</a>
       </div>
     </div>
@@ -108,21 +111,22 @@
   </div>
 </div>
 
-<!-- study tips section -->
+<!-- college prep section -->
 <div id="studytips" class="info-section">
   <div class="container">
     <div class="row">
       <div class="col-md-12 col-sm-12">
-	<h2>Study Tips</h2>
+	<h2>College Prep</h2>
       </div>
       <div class="col-md-6 col-sm-6">
-	<img src="../static/images/studytips.jpg" class="img-responsive" alt="about img">
+	<a href="/collegeprep">
+	<img src="../static/images/collegeprep.jpg" class="img-responsive" alt="about img"></a>
       </div>
       <div class="col-md-6 col-sm-6">
-	<h3>Study Tips</h3>
-	<h4>Make the most of your study time</h4>
-	<p>description here</p>
-	<a href="/studytips" class="btn btn-default btn-link">Show me!</a>
+	<h3>College Preparation</h3>
+	<h4>Preparing for the next step in life</h4>
+	<p>Acing classes throughout high school is important, but don't forget about the next chapter in your education! Here are the pivotal parts of college that you should be prepared for.</p>
+	<a href="/collegeprep" class="btn btn-default btn-link">Show me!</a>
       </div>
     </div>
   </div>
@@ -141,13 +145,9 @@
 <br>
 <!-- feedback section -->
 <script>
-  window.document.addEventListener('myEvent', handleEvent, false)
   function setframescroll() {
   var f = document.getElementById("feedbackframe");
   f.style.height = f.contentDocument.body.scrollHeight +'px';
-  }
-  function handleEvent(e) {
-  setframescroll()
   }
 </script>
 <iframe id="feedbackframe" src="feedback" width="100%" onload="setframescroll()" style="border: none;overflow:hidden;"></iframe>

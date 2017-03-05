@@ -512,3 +512,36 @@ footer span {
     padding-bottom: 30px;
   }
 }
+
+.intro {
+    width: 100%;
+    padding: 50px;
+    font-family: 'Droid Serif';
+}
+
+.head {
+    font-family: 'Oswald';
+    font-size: 48px;
+    color: #D2691E;
+    width: 100%;
+}
+
+.head2 {
+    font-family: 'Oswald';
+    font-size: 24px;
+    color: #D2691E;
+    width: 100%;
+}
+
+.subhead {
+    font-family: 'Droid Serif';
+    font-size: 18px;
+    color: #666360;
+    font-style: italic;
+}
+
+.description {
+    float: left;
+    font-size: 14px;
+    font-family: 'Droid Serif';
+}
