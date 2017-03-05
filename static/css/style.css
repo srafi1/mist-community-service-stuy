@@ -473,6 +473,7 @@ footer span {
   border: 2px solid #444;
   border-radius: 0px;
   color: #444;
+  text-decoration: none;
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
   font-size: 16px;
@@ -485,17 +486,15 @@ footer span {
   -moz-transition: all 0.4s ease-in-out;
   -ms-transition: all 0.4s ease-in-out;
 }
-.btn-link:hover {
+.btn-link:hover, .btn-link:active {
   background: #f2af00;
   border-color: transparent;
   color: #fff;
   text-decoration: none;
 }
-.btn-link:active {
-  background: #f2af00;
-  border-color: transparent;
-  color: #fff;
-  text-decoration: none;
+
+.img-responsive {
+    width: 100%
 }
 
 /* media 960 */

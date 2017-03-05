@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="../static/css/bootstrap.min.css">
+<link rel="stylesheet" href="../static/css/font-awesome.min.css">
+<link rel="stylesheet" href="../static/css/nivo-lightbox.css">
+<link rel="stylesheet" href="../static/css/nivo_themes/default/default.css">
+<link rel="stylesheet" href="../static/css/style.css">
+<!-- google web font css -->
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600,700' rel='stylesheet' type='text/css'>
+
+<!-- favicon -->
+<link rel="shortcut icon" href="../static/images/favicon.ico"/>
+<div id="feedback" class="info-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+	<form action="../feedback" method="post">
+	  <h2>Feedback</h2>
+	  <h3>We would love it if you left some feedback on our site</h3>
+	  <div class="panel panel-default">
+	    <h4>How much did this site help you?</h4>
+	    <h4>
+	      Useless
+	      {% for i in range(10) %}
+	      <input type="radio" name="rating" value="{{i+1}}">{{i+1}} 
+	      {% endfor %}
+	      I'm a scholar now!
+	    </h4>
+	    <h4>Any comments?</h4>
+	    <textarea name="comment" class="form-control"></textarea>
+	    <input type="submit" value="Submit" class="btn btn-link"></input>
+	</form>
+	</div>
+      </div>
+    </div>
+  </div>
+</div>
