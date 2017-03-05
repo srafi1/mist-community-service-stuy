@@ -533,6 +533,13 @@ footer span {
     width: 100%;
 }
 
+.head3 {
+    font-family: 'Oswald';
+    color: #D2691E;
+    font-size: 18px;
+    width: 100%;
+}
+
 .subhead {
     font-family: 'Droid Serif';
     font-size: 18px;
