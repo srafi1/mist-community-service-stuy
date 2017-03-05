@@ -56,6 +56,22 @@
       </ul>
     </div>
     <div class="col-md-6 col-sm-6">
+      <h2 class="head2">SCIENCE/TECHNOLOGY/ENGINEERING/MATH OPPORTUNITIES</h2>
+      <ul>
+	{% for s in stem %}
+	<li>
+	  {{s['name']}}<br>
+	  Deadline: {{s['deadline']}}<br>
+	  Location: {{s['location']}}<br>
+	  Duration: {{s['duration']}}<br>
+	  Age/ Grade requirements: {{s['age/ grade requirements']}}<br>
+	  Details: {{s['details']}}<br>
+	  <a href="{{s['link']}}">Learn more</a>
+	</li>
+	{% endfor %}
+      </ul>
+    </div>
+    <div class="col-md-6 col-sm-6">
       <h2 class="head2">COMMUNITY SERVICE</h2>
       <ul>
 	{% for s in services: %}
@@ -118,22 +134,6 @@
 	{% for h in health %}
 	<li>
 	  <a href="{{h['link']}}">{{h['name']}}</a>
-	</li>
-	{% endfor %}
-      </ul>
-    </div>
-    <div class="col-md-6 col-sm-6">
-      <h2 class="head2">SCIENCE/TECHNOLOGY/ENGINEERING/MATH OPPORTUNITIES</h2>
-      <ul>
-	{% for s in stem %}
-	<li>
-	  {{s['name']}}<br>
-	  Deadline: {{s['deadline']}}<br>
-	  Location: {{s['location']}}<br>
-	  Duration: {{s['duration']}}<br>
-	  Age/ Grade requirements: {{s['age/ grade requirements']}}<br>
-	  Details: {{s['details']}}<br>
-	  <a href="{{s['link']}}">Learn more</a>
 	</li>
 	{% endfor %}
       </ul>
