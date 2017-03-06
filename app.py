@@ -117,7 +117,7 @@ def feedback():
     rating = request.form.get('rating', 0)
     comment = request.form.get('comment', 0)
     if rating == 0 or comment == 0:
-        return render_template('feedback.html')
+        return render_template('feedback1.html')
     try:
         f = open('feedback.txt', 'rU')
         s = f.read()
