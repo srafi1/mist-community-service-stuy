@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="../static/css/bootstrap.min.css">
+<link rel="stylesheet" href="../static/css/font-awesome.min.css">
+<link rel="stylesheet" href="../static/css/nivo-lightbox.css">
+<link rel="stylesheet" href="../static/css/nivo_themes/default/default.css">
+<link rel="stylesheet" href="../static/css/style.css">
+<!-- google web font css -->
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600,700' rel='stylesheet' type='text/css'>
+
+<!-- favicon -->
+<link rel="shortcut icon" href="../static/images/favicon.ico"/>
+
+<form method="post" action="/feedback">
+  Enter your name: <input name="name" type="text" placeholder="John Smith"
+			  {% if name != 0 %}
+			  value="{{name}}"
+			  {% endif %}
+			  ></input><br>
+  Enter your email: <input name="email" type="text" placeholder="human@example.com"
+			   {% if email != 0 %}
+			   value="{{email}}"
+			   {% endif %}
+></input><br>
+  Message:<br>
+  <textarea name="message" rows="5" cols="100"
+	    {% if message != 0 %}
+	    value="{{message}}"
+	    {% endif %}
+></textarea><br>
+  <input type="submit"></input>
+</form>

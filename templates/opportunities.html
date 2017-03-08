@@ -24,10 +24,26 @@
 </div>
 <br>
 
+<div class="description intro">
+  <center>
+    <h2 class="subhead">Choose an area to focus on or browse freely</h2>
+    <br>
+    <a href="#events" class="btn btn-default btn-link smoothScroll">Events</a>
+    <a href="#law" class="btn btn-default btn-link smoothScroll">Law</a>
+    <a href="#stem" class="btn btn-default btn-link smoothScroll">STEM</a>
+    <a href="#service" class="btn btn-default btn-link" smoothScroll>Service</a>
+    <a href="#leadership" class="btn btn-default btn-link smoothScroll">Leadership</a>
+    <a href="#art" class="btn btn-default btn-link smoothScroll">Art/Theatre</a>
+    <a href="#parks" class="btn btn-default btn-link smoothScroll">Environment</a>
+    <a href="#health" class="btn btn-default btn-link smoothScroll">Health</a>
+    <a href="#awards" class="btn btn-default btn-link smoothScroll">Awards</a>
+  </center>
+</div>
+
 <!-- all opportunities section -->
 <div class="description intro">
   <div class="row">
-    <div class="col-md-6 col-sm-6">
+    <div id="events" class="col-md-6 col-sm-6">
       <h2 class="head2">EVENTS:</h2>
       <ul>
 	{% for event in events %}
@@ -40,7 +56,7 @@
 	{% endfor %}
       </ul>
     </div>
-    <div class="col-md-6 col-sm-6">
+    <div id="law" class="col-md-6 col-sm-6">
       <h2 class="head2">LAW/JOBS/BUSINESS/GOVERNMENT</h2>
       <ul>
 	{% for l in law: %}
@@ -54,7 +70,7 @@
 	{% endfor %}
       </ul>
     </div>
-    <div class="col-md-6 col-sm-6">
+    <div id="stem" class="col-md-6 col-sm-6">
       <h2 class="head2">SCIENCE/TECHNOLOGY/ENGINEERING/MATH OPPORTUNITIES</h2>
       <ul>
 	{% for s in stem %}
@@ -70,7 +86,7 @@
 	{% endfor %}
       </ul>
     </div>
-    <div class="col-md-6 col-sm-6">
+    <div id="service" class="col-md-6 col-sm-6">
       <h2 class="head2">COMMUNITY SERVICE</h2>
       <ul>
 	{% for s in services: %}
@@ -82,7 +98,7 @@
 	{% endfor %}
       </ul>
     </div>
-    <div class="col-md-6 col-sm-6">
+    <div id="leadership" class="col-md-6 col-sm-6">
       <h2 class="head2">LEADERSHIP/CULTURAL/ADVOCACY</h2>
       <ul>
 	{% for l in leadership %}
@@ -98,7 +114,7 @@
       </ul>
     </div>
     <div class="col-md-6 col-sm-6">
-      <h2 class="head2">MUSEUMS/MUSIC/ART/THEATER</h2>
+      <h2 id="art" class="head2">MUSEUMS/MUSIC/ART/THEATER</h2>
       <ul>
 	{% for l in arts %}
 	<li>
@@ -111,7 +127,7 @@
 	{% endfor %}
       </ul>
     </div>    
-    <div class="col-md-6 col-sm-6">
+    <div id="parks" class="col-md-6 col-sm-6">
       <h2 class="head2">PARKS/ENVIRONMENT</h2>
       <ul>
 	{% for l in parks %}
@@ -126,7 +142,7 @@
 	{% endfor %}
       </ul>
     </div>
-    <div class="col-md-6 col-sm-6">
+    <div id="health" class="col-md-6 col-sm-6">
       <h2 class="head2">HEALTH CARE OPPORTUNITIES</h2>
       <h3 class="subhead">Most NYC hospitals welcome high school student helpers. Here is a link to a list of public NYC hospitals, followed by several links to a variety of local hospital volunteer offices:</h3>
       <ul>
@@ -137,7 +153,7 @@
 	{% endfor %}
       </ul>
     </div>
-    <div class="col-md-6 col-sm-6">
+    <div id="awards" class="col-md-6 col-sm-6">
       <h2 class="head2">AWARDS/SCHOLARSHIPS</h2>
       <ul>
 	{% for s in awards %}

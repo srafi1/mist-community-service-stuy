@@ -114,27 +114,28 @@ def contact():
 
 @app.route('/feedback', methods=['GET', 'POST'])
 def feedback():
-    rating = request.form.get('rating', 0)
-    comment = request.form.get('comment', 0)
-    if rating == 0 or comment == 0:
-        return render_template('feedback1.html')
+    name = request.form.get('name', '')
+    email = request.form.get('email', '')
+    message = request.form.get('message', '')
+    if name == '' or email == '' or message == '':
+        return render_template('feedback.html',name=name,email=email,message=message)
     try:
         f = open('feedback.txt', 'rU')
         s = f.read()
         f.close()
         f = open('feedback.txt', 'w')
         f.write(s)
-        f.write(processComment(rating, comment))
+        f.write(processComment(name, email, message))
         print(s)
         f.close()
     except:
         print('error saving feedback')
     return render_template('thankyou.html')
 
-def processComment(r, c):
+def processComment(a,b,c):
     c = c.replace('"', "'")
     c = '"' + c + '"'
-    return r + ',' + c + '\n'
+    return a + ',' + b + ',' + c + '\n'
 
 @app.route('/getfeedback')
 def getfeedback():
