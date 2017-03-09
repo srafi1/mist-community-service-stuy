@@ -1,6 +1,31 @@
 {% extends "master.html" %}
 
 {% block container %}
+<script>
+  var visited = localStorage.visited;
+  var loop, state;
+  if (!visited) {
+  alert('Looks like this is your first time on the site!\nPlease complete the form before you begin.');
+  loop = setInterval(function() {
+  var newState = '';
+  if (state == 0) {
+  newState = '0.2';
+  state = 1;
+  } else {
+  newState = '1';
+  state = 0;
+  }
+  $("#crackin").animate({opacity:newState}, 100);
+  }, 500);
+  }
+
+  function done() {
+  clearInterval(loop);
+  $("#crackin").animate({opacity:'1'}, 200);
+  localStorage.visited = true;
+  }
+</script>
+
 <!-- home section -->
 <div id="home">
   <div class="container">
@@ -9,7 +34,7 @@
 	<h2>Welcome to</h2>
 	<h1><strong>Student Essentials</strong></h1>
 	<p>Answer this form before you get started.</p>
-	<a class="btn btn-default" href="https://docs.google.com/forms/d/e/1FAIpQLSd0xP3TtQpAqRgB6r7dFNX4o2spfXLe1cv6-81vEqSrbBIuPw/viewform?usp=sf_link" target="_blank">LET'S GET CRACKIN'</a>
+	<a id="crackin" onclick="done()" class="btn btn-default" href="https://docs.google.com/forms/d/e/1FAIpQLSd0xP3TtQpAqRgB6r7dFNX4o2spfXLe1cv6-81vEqSrbBIuPw/viewform?usp=sf_link" target="_blank">LET'S GET CRACKIN'</a>
 	</div>
       </div>
     </div>
