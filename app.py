@@ -108,11 +108,11 @@ def testprep():
 def collegeprep():
     return render_template('collegeprep.html', page='collegeprep')
     
-@app.route('/contact')
+@app.route('/feedback')
 def contact():
     return render_template('contact.html', page='contact')
 
-@app.route('/feedback', methods=['GET', 'POST'])
+@app.route('/feed', methods=['GET', 'POST'])
 def feedback():
     name = request.form.get('name', '')
     email = request.form.get('email', '')
