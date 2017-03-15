@@ -110,7 +110,7 @@ def collegeprep():
     
 @app.route('/feedback')
 def contact():
-    return render_template('contact.html', page='contact')
+    return render_template('contact.html', page='feedback')
 
 @app.route('/feed', methods=['GET', 'POST'])
 def feedback():
