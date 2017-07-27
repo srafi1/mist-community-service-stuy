@@ -144,9 +144,10 @@ def getfeedback():
     s = s.replace('\n', '<br>')
     return s
     
+@app.route('/shsat')
+def shsat():
+    return render_template('shsat.html').encode('utf-8').strip()
+
 if '__main__' == __name__:
     app.run(debug=True)
 
-@app.route('/NAME_OF_ROUTE')
-def NAME_OF_ROUTE():
-    return render_template('NAME_OF_FILE')
