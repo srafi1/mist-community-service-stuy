@@ -146,3 +146,7 @@ def getfeedback():
     
 if '__main__' == __name__:
     app.run(debug=True)
+
+@app.route('/NAME_OF_ROUTE')
+def NAME_OF_ROUTE():
+    return render_template('NAME_OF_FILE')
