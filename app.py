@@ -146,7 +146,19 @@ def getfeedback():
     
 @app.route('/shsat')
 def shsat():
-    return render_template('shsat.html').encode('utf-8').strip()
+    return render_template('shsat.html')
+
+@app.route('/midprocess')
+def midprocess():
+    return render_template('midprocess.html')
+
+@app.route('/growthmindset')
+def growthmindset():
+    return render_template('growthmindset.html')
+
+@app.route('/middleschool')
+def middleschool():
+    return render_template('middleschool.html')
 
 if '__main__' == __name__:
     app.run(debug=True)

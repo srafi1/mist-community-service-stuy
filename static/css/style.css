@@ -552,3 +552,40 @@ footer span {
     font-size: 14px;
     font-family: 'Droid Serif';
 }
+
+.dropbtn {
+    border: none;
+    cursor: pointer;
+    padding: 30px; 
+    font-family: 'lane_-_narrowregular', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.drop-content {
+    background: white;
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+
+.nav .dropdown .drop-content a {
+    min-width: 100px;
+    line-height: 20px;
+    display: block;
+    padding: 10px 20px 10px 20px;
+}
+.drop-content:hover a {
+    text-decoration: none;
+}
+
+.dropdown:hover .drop-content {
+    display: block;
+    border: solid black 1px;
+}
